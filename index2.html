@@ -34,18 +34,16 @@
     </div>
     
     <div class="container">
-        <h2>Calculadora de consumo Km/L</h2>
-        <label for="distancia">Distância (km):</label>
-        <input type="number" id="distancia" placeholder="">
-
-        <label for="consumo">Consumo do automóvel (km/l):</label>
-        <input type="number" id="consumo" placeholder="">
-
-        <label for="preco">Preço do combustível (R$/l):</label>
-        <input type="number" step="0.01" id="preco" placeholder="">
-
-        <button onclick="calcular()">Calcular</button>
-
+        <h2>Gasolina ou Etanol?</h2>
+    
+        <label for="gasolina">Preço da Gasolina (R$/l):</label>
+        <input type="number" step="0.01" id="gasolina" placeholder="">
+    
+        <label for="etanol">Preço do Etanol (R$/l):</label>
+        <input type="number" step="0.01" id="etanol" placeholder="">
+    
+        <button onclick="calcularCombustivel()">Calcular</button>
+    
         <h3 id="resultado"></h3>
 
         <h4>Feito por João Guilherme.</h4>

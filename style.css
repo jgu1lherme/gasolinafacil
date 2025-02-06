@@ -10,12 +10,81 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #16161e; /* Fundo claro */
+    background-color: #16161e; 
+    flex-direction: column;
 }
 
-.container {
+.tab {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    margin: -25px 0px 20px 0px;
     max-width: 400px;
-    max-height: 395px;
+    max-height: 305px;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #1a1b26;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #1f202b;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    gap: 50px;
+}
+
+.tab span {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    color: white;
+    font-size: 35px;
+    margin-right: 5px;
+}
+
+.tab span p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2px;
+    color: #c0caf5;
+    text-align: center;
+}
+
+.tab span:hover {
+    color: white;
+    transform: scale(1.05);
+    transition: ease all 0.2s;
+    cursor: pointer;
+}
+
+.tab-link {
+    text-decoration: none;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: inherit; 
+}
+
+.tab-link:hover .material-symbols-outlined {
+    transform: scale(1.05); 
+    transition: ease all 0.2s;
+}
+
+
+.container {
+    position: fixed;
+    top: 125px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000; 
+    max-width: 400px;
+    max-height: 490px;
     width: 100%;
     padding: 20px;
     border: 1px solid #1a1b26;
@@ -28,7 +97,50 @@ body {
     color: #cfc9c2;
     font-size: 15px;
     text-align: center;
-    padding: 20px;
+    position: fixed;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider {
+    width: 100%;
+    height: 25px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 33px;
+    height: 33px;
+    background: #3b9156;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    transition: ease all 0.2s;
+    background: #37834f;
+}
+
+.slider:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+    transition: ease all 0.2s;
+}
+
+#trafegoTexto {
+    display: block;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
 }
 
 h2 {
@@ -57,7 +169,7 @@ input {
 
 button {
     width: 100%;
-    padding: 16px;
+    padding: 15px;
     margin-top: 10px;
     border: none;
     border-radius: 5px;
@@ -79,6 +191,7 @@ button:hover {
 #resultado {
     margin-top: 20px;
     font-size: 20px;
-    color: #333;
+    color: #fff;
     font-weight: bold;
+    text-align: center;
 }
