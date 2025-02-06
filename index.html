@@ -36,13 +36,13 @@
     <div class="container">
         <h2>Calculadora de consumo Km/L</h2>
         <label for="distancia">Distância (km):</label>
-        <input type="number" id="distancia" placeholder="" inputmode="numeric" pattern="[0-9.,]*">
+        <input type="text" id="distancia" placeholder="" inputmode="decimal">
         
         <label for="consumo">Consumo do automóvel (km/l):</label>
-        <input type="number" id="consumo" placeholder="" inputmode="numeric" pattern="[0-9.,]*">
+        <input type="text" id="consumo" placeholder="" inputmode="decimal">
         
         <label for="preco">Preço do combustível (R$/l):</label>
-        <input type="number" step="0.01" id="preco" placeholder="" inputmode="numeric" pattern="[0-9.,]*">        
+        <input type="text" step="0.01" id="preco" placeholder="" inputmode="decimal">         
 
         <button onclick="calcular()">Calcular</button>
 
